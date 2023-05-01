@@ -1,3 +1,4 @@
+![mod].(https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/assets/sensors-22-02869-g001.webp)
 # Estudos_Kubernetes
 Material organizado dentro de meus estudos relacionados ao Kubernetes!
 
