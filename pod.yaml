@@ -3,16 +3,15 @@ kind: Pod
 metadata:
   name: meu-pod
 spec:
-containers:
-  - name: meu-container
-    image: nginx
-    ports:
+  containers:
+   - name: meu-container
+  image: nginx:latest
+  ports:
     - containerPort: 80
-
-
-# Neste exemplo, estamos criando um Pod com um contêiner que utiliza a imagem do Nginx. O Pod tem um nome específico definido na seção "metadata". O contêiner é definido na seção "spec" e contém as seguintes configurações:
-
-# Nome do contêiner: "meu-container"
-# Imagem do contêiner: "nginx"
-# Porta do contêiner: 80
-# O YAML define a configuração do Pod de forma declarativa, o que significa que o Kubernetes interpretará o arquivo e criará o Pod conforme especificado.
+    
+# Neste exemplo, definimos um Pod com um único container chamado "meu-container". Este container usa a imagem "nginx:latest" e expõe a porta 80.
+# O nome do Pod é definido como "meu-pod" na seção "metadata". A seção "spec" especifica a configuração do Pod. Dentro dela, 
+# definimos uma lista de containers, no nosso caso, apenas um container.
+# A seção "ports" define a porta em que o container está escutando. Neste exemplo, estamos expondo a porta 80 do container.
+# É importante observar que essa porta não é acessível diretamente de fora do cluster. Para tornar o Pod acessível de fora do cluster, você precisará definir um objeto Service.
+# Lembre-se de que este é um exemplo muito simples, e que você pode adicionar várias outras configurações ao seu Pod, dependendo das necessidades da sua aplicação. 
