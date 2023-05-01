@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: meu-app
+  template:
+    metadata:
+      labels:
+        app: meu-app
+    spec:
+      containers:
+      - name: meu-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        
+# Neste exemplo, estamos criando um Deployment que gerencia três réplicas do nosso Pod "meu-pod", que está usando a imagem do Nginx.
+# O nome do Deployment é definido como "meu-deployment" na seção "metadata".
+# A seção "spec" especifica a configuração do Deployment. Estamos definindo "replicas: 3", o que significa que o Kubernetes criará três instâncias do nosso Pod.
+# A seção "selector" especifica como o Kubernetes seleciona os Pods gerenciados por este Deployment. Neste caso, estamos usando o label "app: meu-app".
+# A seção "template" especifica a configuração do Pod. Estamos definindo um label "app: meu-app" na seção "metadata" e definindo a configuração do container na seção "spec",
+# que é semelhante ao exemplo anterior.
+# Este é um exemplo muito simples de um arquivo de Deployment, e existem muitas outras configurações que podem ser definidas. Por exemplo, você pode definir estratégias de rollout, atualizações automáticas, health checks e muito mais.
