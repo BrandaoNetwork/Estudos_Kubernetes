@@ -1,5 +1,5 @@
 # Estudos_Kubernetes
-Material organizado dentro de meus estudos relacionados a Kubernetes!
+Material organizado dentro de meus estudos relacionados ao Kubernetes!
 
 Um Kubernetes Pod é a menor unidade no modelo de objetos do Kubernetes. Ele representa um único processo em execução em um cluster Kubernetes.
 Um Pod pode conter um ou mais contêineres, que compartilham o mesmo espaço de rede e armazenamento. Cada Pod é criado com um endereço IP único dentro do cluster, o que permite que os contêineres dentro do Pod se comuniquem entre si.
