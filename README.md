@@ -9,6 +9,7 @@ Ele representa um único processo em execução em um cluster Kubernetes.
 Um Pod pode conter um ou mais contêineres, que compartilham o mesmo espaço de rede e armazenamento. Cada Pod é criado com um endereço IP único dentro do cluster, o que permite que os contêineres dentro do Pod se comuniquem entre si.
 Os Pods são escalonados e gerenciados pelo Kubernetes, que pode replicá-los para fornecer alta disponibilidade e escalabilidade aos aplicativos implantados no cluster. O Kubernetes também gerencia a programação dos Pods em nós de cluster disponíveis, com base nos recursos necessários pelos contêineres do Pod e nos recursos disponíveis em cada nó.
 Em resumo, um Kubernetes Pod é a unidade básica de implantação no Kubernetes, que fornece uma maneira de agrupar contêineres relacionados e gerenciá-los como uma única unidade.
+
 [Exemplo: POD](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/pod.yaml)
 
 >## Deployment é um objeto que define o estado desejado de um conjunto de Pods em um cluster Kubernetes.
