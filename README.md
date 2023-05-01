@@ -1,6 +1,7 @@
-![mod](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/assets/sensors-22-02869-g001.webp)
 # Estudos_Kubernetes
 Material organizado dentro de meus estudos relacionados ao Kubernetes!
+![mod](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/assets/sensors-22-02869-g001.webp)
+
 
 ## Pod é a menor unidade no modelo de objetos do Kubernetes.
 Ele representa um único processo em execução em um cluster Kubernetes.
