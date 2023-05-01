@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meu-pod
+spec:
+containers:
+  - name: meu-container
+    image: nginx
+    ports:
+    - containerPort: 80
+
+
+# Neste exemplo, estamos criando um Pod com um contêiner que utiliza a imagem do Nginx. O Pod tem um nome específico definido na seção "metadata". O contêiner é definido na seção "spec" e contém as seguintes configurações:
+
+# Nome do contêiner: "meu-container"
+# Imagem do contêiner: "nginx"
+# Porta do contêiner: 80
+# O YAML define a configuração do Pod de forma declarativa, o que significa que o Kubernetes interpretará o arquivo e criará o Pod conforme especificado.
