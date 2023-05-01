@@ -10,7 +10,7 @@ Um Pod pode conter um ou mais contêineres, que compartilham o mesmo espaço de 
 Os Pods são escalonados e gerenciados pelo Kubernetes, que pode replicá-los para fornecer alta disponibilidade e escalabilidade aos aplicativos implantados no cluster. O Kubernetes também gerencia a programação dos Pods em nós de cluster disponíveis, com base nos recursos necessários pelos contêineres do Pod e nos recursos disponíveis em cada nó.
 Em resumo, um Kubernetes Pod é a unidade básica de implantação no Kubernetes, que fornece uma maneira de agrupar contêineres relacionados e gerenciá-los como uma única unidade.
 
-[Exemplo: POD](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/pod.yaml)
+[Exemplo: Pod](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/pod.yaml)
 
 >## Deployment é um objeto que define o estado desejado de um conjunto de Pods em um cluster Kubernetes.
 Ele fornece um mecanismo para atualizar e gerenciar o estado dos Pods em execução em um cluster.
@@ -18,6 +18,8 @@ Um Deployment gerencia um conjunto de réplicas de um Pod, garantindo que o núm
 Os Deployments também fornecem um mecanismo para atualizar um conjunto de Pods para uma nova versão de um aplicativo de maneira controlada, permitindo uma atualização gradual do estado de execução dos Pods em um cluster. Por exemplo, um Deployment pode ser configurado para atualizar um conjunto de Pods com um novo contêiner de imagem, um novo arquivo de configuração ou uma nova versão do aplicativo.
 Além disso, um Deployment pode ser escalado para aumentar ou diminuir o número de réplicas de um conjunto de Pods, permitindo que os aplicativos sejam dimensionados de acordo com a demanda.
 Em resumo, um Kubernetes Deployment é um objeto que gerencia a implantação, atualização e escalabilidade de um conjunto de Pods em um cluster Kubernetes. Ele fornece um mecanismo para gerenciar o estado desejado de um aplicativo em execução em um cluster.
+
+[Exemplo: Deployment](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/Deployment.yaml)
 
 >## DaemonSet é um tipo de objeto no Kubernetes que garante que um determinado conjunto de pods seja executado em todos os nós do cluster ou em um subconjunto específico de nós, dependendo da configuração.
 Ele é usado principalmente para implantar daemons, como monitores de registro, coletadores de métricas ou proxies de rede, em todos os nós de um cluster.
