@@ -14,7 +14,8 @@ Os Deployments também fornecem um mecanismo para atualizar um conjunto de Pods 
 Além disso, um Deployment pode ser escalado para aumentar ou diminuir o número de réplicas de um conjunto de Pods, permitindo que os aplicativos sejam dimensionados de acordo com a demanda.
 Em resumo, um Kubernetes Deployment é um objeto que gerencia a implantação, atualização e escalabilidade de um conjunto de Pods em um cluster Kubernetes. Ele fornece um mecanismo para gerenciar o estado desejado de um aplicativo em execução em um cluster.
 
-## DaemonSet é um tipo de objeto no Kubernetes que garante que um determinado conjunto de pods seja executado em todos os nós do cluster ou em um subconjunto específico de nós, dependendo da configuração. Ele é usado principalmente para implantar daemons, como monitores de registro, coletadores de métricas ou proxies de rede, em todos os nós de um cluster.
+## DaemonSet é um tipo de objeto no Kubernetes que garante que um determinado conjunto de pods seja executado em todos os nós do cluster ou em um subconjunto específico de nós, dependendo da configuração.
+Ele é usado principalmente para implantar daemons, como monitores de registro, coletadores de métricas ou proxies de rede, em todos os nós de um cluster.
 
 O DaemonSet garante que um pod seja executado em todos os nós do cluster, ou em um subconjunto de nós com determinada etiqueta, independentemente da criação ou exclusão de nós. Quando um novo nó é adicionado ao cluster, o DaemonSet implanta automaticamente um pod nele. Da mesma forma, quando um nó é removido do cluster, o DaemonSet garante que o pod correspondente seja removido.
 Essa abordagem é útil para garantir que certos serviços, como monitoramento e logging, estejam sempre disponíveis em todos os nós do cluster, mesmo quando novos nós são adicionados dinamicamente.
