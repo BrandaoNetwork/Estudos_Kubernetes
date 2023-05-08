@@ -63,11 +63,9 @@ Os dados em um ConfigMap podem ser definidos manualmente ou carregados de um arq
 As variáveis de ambiente são úteis para armazenar dados de configuração pequenos e simples, como endereços de banco de dados ou credenciais de API. Já os volumes montados são úteis para armazenar arquivos de configuração mais complexos, como arquivos de propriedades, XML ou JSON.
 Os ConfigMaps são úteis para separar a configuração do seu aplicativo da imagem do contêiner, tornando mais fácil a implantação do seu aplicativo em diferentes ambientes. Eles permitem que você configure seu aplicativo de forma dinâmica sem precisar recriar a imagem do contêiner ou alterar o código-fonte.
 
->## Secret é um objeto que permite armazenar dados confidenciais, como senhas, tokens de acesso e chaves SSH. Esses dados podem ser usados por pods em um cluster Kubernetes, sem que a necessidade de expor informações confidenciais diretamente no código ou nas configurações de deployment.
-
+>## Secret é um objeto que permite armazenar dados confidenciais, como senhas, tokens de acesso e chaves SSH.
+Esses dados podem ser usados por pods em um cluster Kubernetes, sem que a necessidade de expor informações confidenciais diretamente no código ou nas configurações de deployment.
 Os Secrets são armazenados no cluster Kubernetes e podem ser consumidos pelos pods de várias formas, como variáveis de ambiente, volumes montados em containers ou diretamente em arquivos.
-
 Os Secrets são codificados em base64 quando são armazenados no cluster, para evitar que dados sensíveis sejam expostos em texto simples. Além disso, os Secrets são criptografados em repouso no armazenamento do Kubernetes, o que ajuda a proteger ainda mais as informações confidenciais armazenadas neles.
-
 Os Secrets podem ser criados e gerenciados usando a interface de linha de comando do Kubernetes (kubectl) ou arquivos YAML que descrevem o objeto Secret e podem ser aplicados ao cluster usando o kubectl apply.
 
