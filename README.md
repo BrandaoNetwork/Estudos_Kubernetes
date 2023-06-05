@@ -33,7 +33,7 @@ Ao contrário dos Deployments, que gerenciam um conjunto de réplicas de contêi
 Os StatefulSets são úteis para aplicativos que exigem um número fixo de instâncias e onde a ordem de inicialização ou paralisação é importante. Eles também são capazes de lidar com operações de atualização e rollback em aplicativos com estado sem perder dados.
 Os StatefulSets são frequentemente usados para gerenciar aplicativos de banco de dados, como o MySQL e o PostgreSQL, e sistemas de processamento de fluxo, como o Apache Kafka.
 
-[Exemplo: StatefulSet](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/pod.yaml)
+[Exemplo: StatefulSet](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/StatefulSet.yaml)
 
 >## ReplicaSet é um objeto que ajuda a garantir que um determinado número de réplicas de pods esteja sempre em execução no cluster do Kubernetes.
 Ele é frequentemente usado para garantir alta disponibilidade e escalabilidade de aplicativos em contêiner.
