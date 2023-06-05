@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cassandra-cluster
+spec:
+  serviceName: cassandra
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cassandra
+  template:
+    metadata:
+      labels:
+        app: cassandra
+    spec:
+      containers:
+        - name: cassandra
+          image: cassandra:latest
+          ports:
+            - containerPort: 9042
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/cassandra
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 10Gi
+            
+# Neste exemplo, estamos criando um StatefulSet chamado "cassandra-cluster" com 3 réplicas. Cada réplica é representada por um Pod. O StatefulSet usa um seletor para identificar os Pods pertencentes a ele, definido pelos labels "app: cassandra".
+# O template define as especificações para criar os Pods. Cada Pod é configurado para executar um contêiner Cassandra e expõe a porta 9042 para comunicação com o cluster. Além disso, cada Pod possui um volume montado no diretório "/var/lib/cassandra" para armazenar os dados persistentes do banco de dados.
+# O StatefulSet também inclui um volumeClaimTemplates, que define a solicitação de armazenamento persistente para cada réplica. Neste exemplo, estamos solicitando um volume persistente de 10 gigabytes para cada réplica do Cassandra.
+# O StatefulSet garante que cada réplica tenha um nome único e mantenha seu estado persistente, mesmo que ocorram reinicializações ou dimensionamento. Isso é especialmente importante em casos como bancos de dados distribuídos, onde a ordem e a persistência das réplicas são cruciais para garantir a consistência dos dados.
