@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: meu-daemonset
+spec:
+  selector:
+    matchLabels:
+      app: meu-app
+  template:
+    metadata:
+      labels:
+        app: meu-app
+    spec:
+      containers:
+      - name: meu-container
+        image: meu-container:latest
+        # Configurações adicionais do container
+      # Configurações adicionais do template
+      
+# Neste exemplo, temos um DaemonSet chamado "meu-daemonset". Ele usa um seletor para identificar os nós em que o DaemonSet deve ser executado. No caso, estamos usando o rótulo "app: meu-app" para corresponder aos nós.
+# Dentro do template, definimos os detalhes do pod que será implantado em cada nó correspondente. No exemplo, temos um único container chamado "meu-container" com uma imagem especificada como "meu-container:latest". Você também pode adicionar configurações adicionais, como recursos, volumes, variáveis de ambiente, etc., conforme necessário.
+# Quando esse DaemonSet é implantado, o Kubernetes garante que uma cópia do pod definido no template seja executada em todos os nós correspondentes ao seletor. Se novos nós forem adicionados ao cluster com o rótulo "app: meu-app", o Kubernetes também iniciará automaticamente pods adicionais para manter a cópia em cada nó.
+# Essa é apenas uma visão geral básica de um DaemonSet no Kubernetes. Você pode personalizar e adicionar mais configurações conforme suas necessidades específicas.
