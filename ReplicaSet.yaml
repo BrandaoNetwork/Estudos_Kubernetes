@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: meu-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: meu-app
+  template:
+    metadata:
+      labels:
+        app: meu-app
+    spec:
+      containers:
+      - name: meu-container
+        image: meu-container:latest
+        # Configurações adicionais do container
+      # Configurações adicionais do template
+
+# Neste exemplo, temos um ReplicaSet chamado "meu-replicaset". Definimos replicas: 3, o que significa que queremos manter três réplicas do pod especificado.
+# Usamos o seletor para identificar os pods gerenciados pelo ReplicaSet. No exemplo, estamos usando o rótulo "app: meu-app" para corresponder aos pods.
+# Dentro do template, definimos os detalhes do pod que será criado pelo ReplicaSet. No exemplo, temos um único container chamado "meu-container" com uma imagem especificada como "meu-container:latest". Você também pode adicionar configurações adicionais, como recursos, volumes, variáveis de ambiente, etc., conforme necessário.
+# Quando o ReplicaSet é implantado, o Kubernetes garante que o número especificado de réplicas do pod definido no template esteja em execução a qualquer momento. Se o número de réplicas cair abaixo do valor especificado (no caso, 3), o ReplicaSet criará novos pods para restaurar o número desejado. Se o número de réplicas exceder o valor especificado, o ReplicaSet terminará os pods extras para corresponder à quantidade desejada.
+# Essa é apenas uma visão geral básica de um ReplicaSet no Kubernetes. Você pode personalizar e adicionar mais configurações conforme suas necessidades específicas.
