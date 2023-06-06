@@ -43,6 +43,8 @@ O ReplicaSet é uma versão mais avançada do objeto ReplicationController, que 
 O ReplicaSet é projetado para monitorar o estado dos pods e garantir que o número desejado de réplicas esteja sempre em execução, mesmo quando os pods falham ou os nós do cluster são adicionados ou removidos. Se houver mais ou menos réplicas do que o número desejado, o ReplicaSet fará as ações necessárias para corrigir o estado atual.
 Em geral, os ReplicaSets são usados em conjunto com outros objetos Kubernetes, como Services e Deployments, para implementar aplicativos altamente disponíveis e escaláveis. Eles são uma peça fundamental da arquitetura de orquestração de contêineres do Kubernetes.
 
+[Exemplo: ReplicaSet](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/ReplicaSet.yaml)
+
 >## Replication Controllers no Kubernetes são responsáveis por garantir que um número especificado de réplicas de um pod esteja sendo executado a qualquer momento.
 Eles são essencialmente usados para manter o estado desejado do sistema, escalando o número de réplicas para cima ou para baixo com base na configuração fornecida.
 
