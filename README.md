@@ -27,6 +27,8 @@ Ele é usado principalmente para implantar daemons, como monitores de registro, 
 O DaemonSet garante que um pod seja executado em todos os nós do cluster, ou em um subconjunto de nós com determinada etiqueta, independentemente da criação ou exclusão de nós. Quando um novo nó é adicionado ao cluster, o DaemonSet implanta automaticamente um pod nele. Da mesma forma, quando um nó é removido do cluster, o DaemonSet garante que o pod correspondente seja removido.
 Essa abordagem é útil para garantir que certos serviços, como monitoramento e logging, estejam sempre disponíveis em todos os nós do cluster, mesmo quando novos nós são adicionados dinamicamente.
 
+[Exemplo: DaemonSet](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/DaemonSet.yaml)
+
 >## StatefulSet é um objeto no Kubernetes que permite a execução de aplicativos que exigem identificadores persistentes e estáveis para cada uma de suas instâncias.
 É uma abstração de mais alto nível em relação a um Deployment, projetada para gerenciar aplicativos de estado, como bancos de dados, cache e sistemas de processamento de fluxo.
 Ao contrário dos Deployments, que gerenciam um conjunto de réplicas de contêineres sem identidade ou estado, o StatefulSet é projetado para garantir que cada pod em sua coleção tenha um nome único e persistente e mantenha sua identidade e estado durante todo o ciclo de vida do pod.
