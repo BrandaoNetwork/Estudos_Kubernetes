@@ -1,0 +1,30 @@
+name: Send Email with Repository Changes
+
+on:
+  push:
+    branches:
+      - main  # ou a branch que você deseja monitorar
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Zip repository
+      run: zip -r repo.zip .
+
+    - name: Send email
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: 'Arquivos atualizados do repositório'
+        body: 'Os arquivos da branch main foram atualizados. Veja o anexo.'
+        to: brandaonetwork@hotmail.com
+        from: ${{ secrets.EMAIL_USERNAME }}
+        attachments: repo.zip
