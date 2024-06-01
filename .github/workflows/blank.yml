@@ -1,30 +1,31 @@
-name: Send Email with Repository Changes
+name: Backup Repository to Azure Blob Storage
 
 on:
   push:
     branches:
-      - main  # ou a branch que você deseja monitorar
+      - main
+  workflow_dispatch:
 
 jobs:
-  send_email:
+  backup:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Zip repository
-      run: zip -r repo.zip .
+      - name: Set up Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Send email
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: ${{ secrets.EMAIL_USERNAME }}
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: 'Arquivos atualizados do repositório'
-        body: 'Os arquivos da branch main foram atualizados. Veja o anexo.'
-        to: brandaonetwork@hotmail.com
-        from: ${{ secrets.EMAIL_USERNAME }}
-        attachments: repo.zip
+      - name: Archive repository
+        run: tar -czvf repository-backup.tar.gz .
+
+      - name: Upload to Azure Blob Storage
+        env:
+          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          AZURE_STORAGE_CONTAINER: ${{ secrets.AZURE_STORAGE_CONTAINER }}
+        run: |
+          az storage blob upload --container-name $AZURE_STORAGE_CONTAINER --file repository-backup.tar.gz --name repository-backup-$(date +'%Y-%m-%d_%H-%M-%S').tar.gz
+        shell: bash
