@@ -18,6 +18,8 @@ Eficiência Operacional: Automatiza tarefas manuais de gerenciamento de contêin
 Resiliência: Garante que aplicações estejam sempre disponíveis e funcionais.
 Em resumo, Kubernetes simplifica a complexidade do gerenciamento de contêineres, permitindo que as equipes de desenvolvimento e operações se concentrem em entregar valor através de suas aplicações.
 
+![mod](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/assets/sensors-22-02869-g001.webp)
+
 >## Pod é a menor unidade no modelo de objetos do Kubernetes.
 
 Ele representa um único processo em execução em um cluster Kubernetes.
