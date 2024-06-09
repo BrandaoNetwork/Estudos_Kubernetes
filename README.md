@@ -14,9 +14,10 @@ Principais funcionalidades incluem:
 
 Benefícios principais são:
 
-Portabilidade: Funciona em qualquer ambiente de nuvem ou on-premises.
-Eficiência Operacional: Automatiza tarefas manuais de gerenciamento de contêineres.
-Resiliência: Garante que aplicações estejam sempre disponíveis e funcionais.
+- Portabilidade: Funciona em qualquer ambiente de nuvem ou on-premises.
+- Eficiência Operacional: Automatiza tarefas manuais de gerenciamento de contêineres.
+- Resiliência: Garante que aplicações estejam sempre disponíveis e funcionais.
+
 Em resumo, Kubernetes simplifica a complexidade do gerenciamento de contêineres, permitindo que as equipes de desenvolvimento e operações se concentrem em entregar valor através de suas aplicações.
 
 ![mod](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/assets/K8s.html)
