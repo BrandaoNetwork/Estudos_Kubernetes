@@ -1,7 +1,22 @@
 # Estudos_Kubernetes
 Material organizado dentro de meus estudos relacionados ao Kubernetes!
 ![mod](https://github.com/BrandaoNetwork/Estudos_Kubernetes/blob/main/assets/sensors-22-02869-g001.webp)
+Kubernetes é uma plataforma open-source para orquestração de contêineres que automatiza a implantação, o escalonamento e a operação de aplicações em contêineres. Ele agrupa uma coleção de máquinas físicas ou virtuais em um cluster, tornando-as um ambiente unificado para a execução de contêineres.
 
+Principais funcionalidades incluem:
+
+Gerenciamento de Contêineres: Orquestra a execução de contêineres, gerenciando seu ciclo de vida.
+Escalabilidade Automática: Ajusta automaticamente o número de contêineres com base na carga de trabalho.
+Self-Healing: Detecta e substitui contêineres que falham, garantindo alta disponibilidade.
+Load Balancing e Service Discovery: Distribui o tráfego de rede entre diferentes instâncias de contêineres e facilita a descoberta de serviços.
+Automação de Deployments e Rollbacks: Facilita a implantação de novas versões de aplicações e pode reverter automaticamente em caso de falhas.
+Gerenciamento de Configurações e Segredos: Gerencia dados de configuração e informações sensíveis de forma segura.
+Benefícios principais são:
+
+Portabilidade: Funciona em qualquer ambiente de nuvem ou on-premises.
+Eficiência Operacional: Automatiza tarefas manuais de gerenciamento de contêineres.
+Resiliência: Garante que aplicações estejam sempre disponíveis e funcionais.
+Em resumo, Kubernetes simplifica a complexidade do gerenciamento de contêineres, permitindo que as equipes de desenvolvimento e operações se concentrem em entregar valor através de suas aplicações.
 
 >## Pod é a menor unidade no modelo de objetos do Kubernetes.
 
