@@ -5,12 +5,13 @@ Kubernetes é uma plataforma open-source para orquestração de contêineres que
 
 Principais funcionalidades incluem:
 
-Gerenciamento de Contêineres: Orquestra a execução de contêineres, gerenciando seu ciclo de vida.
-Escalabilidade Automática: Ajusta automaticamente o número de contêineres com base na carga de trabalho.
-Self-Healing: Detecta e substitui contêineres que falham, garantindo alta disponibilidade.
-Load Balancing e Service Discovery: Distribui o tráfego de rede entre diferentes instâncias de contêineres e facilita a descoberta de serviços.
-Automação de Deployments e Rollbacks: Facilita a implantação de novas versões de aplicações e pode reverter automaticamente em caso de falhas.
-Gerenciamento de Configurações e Segredos: Gerencia dados de configuração e informações sensíveis de forma segura.
+- Gerenciamento de Contêineres: Orquestra a execução de contêineres, gerenciando seu ciclo de vida.
+- Escalabilidade Automática: Ajusta automaticamente o número de contêineres com base na carga de trabalho.
+- Self-Healing: Detecta e substitui contêineres que falham, garantindo alta disponibilidade.
+- Load Balancing e Service Discovery: Distribui o tráfego de rede entre diferentes instâncias de contêineres e facilita a descoberta de serviços.
+- Automação de Deployments e Rollbacks: Facilita a implantação de novas versões de aplicações e pode reverter automaticamente em caso de falhas.
+- Gerenciamento de Configurações e Segredos: Gerencia dados de configuração e informações sensíveis de forma segura.
+
 Benefícios principais são:
 
 Portabilidade: Funciona em qualquer ambiente de nuvem ou on-premises.
