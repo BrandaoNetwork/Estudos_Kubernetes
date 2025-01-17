@@ -45,4 +45,4 @@ Esta tabela explica a composição de um agendamento no formato **cron** usado n
 
 ---
 
-Se precisar de ajuda para criar ou revisar uma expressão cron específica, é só pedir! 😊
+
